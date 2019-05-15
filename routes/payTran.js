@@ -1,12 +1,12 @@
 const payTranRouter = require('express').Router();
 
-const getAllPayTran = require();
-const addPayTran = require();
-const deletePayTran = require();
+const getAllPayTran = require('../controllers/payTran/gettAllPayTran');
+const addPayTran = require('../controllers/payTran/addPayTran');
+
 
 payTranRouter.get('/', getAllPayTran);
 payTranRouter.post('/add', addPayTran);
-payTranRouter.delete('/name', deletePayTran);
+
 
 module.exports = payTranRouter;
 
