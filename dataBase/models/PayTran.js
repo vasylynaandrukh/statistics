@@ -1,23 +1,23 @@
-module.exports = (sequelize, DataTypes)=>{
+module.exports = (sequelize, DataTypes) => {
     const PayTran = sequelize.define('PayTran', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        Sender_name:{
+        Sender_name: {
             type: DataTypes.STRING
         },
-        Receiver_name:{
-            type:DataTypes.STRING
+        Receiver_name: {
+            type: DataTypes.STRING
         },
-        Amount:{
-            type:DataTypes.STRING
+        Amount: {
+            type: DataTypes.STRING
         },
         Date: {
-            type: DataTypes.TIMESTAMP
+            type: DataTypes.DATE
         }
-        },{
+    }, {
         tableName: 'payTran',
         timestamps: false
 
