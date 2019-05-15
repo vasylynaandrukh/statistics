@@ -6,7 +6,7 @@ const DbUser = 'root';
 const DbPass = 'vasylyna';
 
 module.exports = (() => {
-    let instanse;
+    let instance;
 
     function initConnection() {
         let client = new Sequelize( DbName, DbUser, DbPass,{
@@ -36,10 +36,10 @@ module.exports = (() => {
 
     return {
         getInstance:()=> {
-            if (!instanse){
-                instanse = initConnection();
+            if (!instance){
+                instance = initConnection();
             }
-            return instanse;
+            return instance;
         }
     }
 })();
